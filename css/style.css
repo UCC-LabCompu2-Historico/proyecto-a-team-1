@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #E6E6E6;
+    font:1em "Open Sans", sans-serif;
+}
+
+h1 {
+
+    font:1.2em  "Razer Regular" ;
+
+}
+h2 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 18px;
+    padding: 10px;
+}
+
+header, .main, footer {
+    background:#cccccc;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+img{
+    display:block;
+    margin:auto;
+}
+
+header nav {
+    background:#528FD5;
+    overflow: hidden;
+}
+header nav ul {
+    list-style: none;
+}
+header nav ul li {
+    float: left;
+}
+header nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    background: #75ACEC;
+}
+
+.main .datos {
+
+    width: 50%;
+    float: left;
+    margin-right: 2%;
+}
+
+.main .datos article {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #cccccc;
+    border-radius: 5px;
+}
+
+
+aside {
+    width: 48%;
+    background: #fff;
+    float: left;
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+}
+
+div {
+    padding: 20px;
+
+}
+
+
+#grafico {
+    border: black 1px solid;
+    width: 100%;
+}
+
+footer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background:#000000;
+    color:#fff;
+    clear: both;
+    padding:10px 0 ;
+    text-align: center;
+}
+
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+input[type=checkbox] {
+    margin: 8px;
+
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+#resultado {
+    width: 100%;
+}
+
+#agregar {
+    width: 20%;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: small;
+    color: buttontext;
+    background-color: buttonface;
+    border-color: buttonface;
+    border-width: 2px;
+    border-style: outset;
+    border-image: initial;
+}
+
+select {
+    width: 25%;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+input:focus{
+    border: 1px solid #1668C4;
+}
+
+input[type="submit"] {
+
+    background: #1668C4;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    width: 50%;
+    padding: 12px 18px;
+    margin: 6px 0;
+    font:1.2em "Open Sans", sans-serif;
+
+}
+input[type="submit"]:hover{
+    background:#4A88F4;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
