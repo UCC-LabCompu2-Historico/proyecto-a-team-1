@@ -105,12 +105,44 @@ div {
     float: left;
 }
 
-#imagen {
 
-
+.main .desarrollador {
+    width: 100%;
+    float: left;
+    
 }
 
+.main .desarrollador article {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #cccccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
 
+#foto {
+    width: 30%;
+    float: left;
+    margin-right: 2%;
+    border-radius: 5px;
+}
+
+#usuario {
+    width: 48%;
+    background: #fff;
+    float: left;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#contacto {
+    width: 48%;
+    background: #fff;
+    float: left;
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+}
 
 #grafico {
     border: black 1px solid;
