@@ -9,9 +9,7 @@ body{
 }
 
 h1 {
-
     font:1.2em  "Razer Regular" ;
-
 }
 h2 {
     font-size: 18px;
@@ -20,6 +18,16 @@ h3 {
     font-size: 18px;
     padding: 10px;
 }
+
+h4 {
+    font:1em "Open Sans", sans-serif;
+}
+
+p {
+    text-align: justify;
+    margin-top: 10px;
+}
+
 
 header, .main, footer {
     background:#cccccc;
@@ -53,7 +61,6 @@ header nav ul li a:hover {
 }
 
 .main .datos {
-
     width: 50%;
     float: left;
     margin-right: 2%;
@@ -78,8 +85,31 @@ aside {
 
 div {
     padding: 20px;
+}
+
+
+.main .ejemplos {
+    width: 100%;
+    float: left;
+}
+
+.main .ejemplos article {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #cccccc;
+    border-radius: 5px;
+}
+
+#ejemplo {
+    width: 50%;
+    float: left;
+}
+
+#imagen {
+
 
 }
+
 
 
 #grafico {
