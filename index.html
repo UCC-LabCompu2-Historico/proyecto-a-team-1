@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="funciones.js"></script>
 
     <title>Calculadora de vectores</title>
 </head>
@@ -29,63 +30,52 @@
 
     <section class="datos">
 
-        <article>
-            <h2>Vectores</h2>
-            <div>
-            <form>
+<article>
+<h2>Vectores</h2>
+<div>
+<form>
 
-                <ul>
-                    <li>
-                        <label for="f1">v1</label>
-                        <input type="text" id="v1" name="v1" placeholder="valores separados por comas">
+    <ul>
+        <li>
+            <label for="f1">v1</label>
 
-                        <select id="f1" name="forma">
-                            <option value="compleja">Compleja</option>
-                            <option value="carteciana">Carteciana</option>
-                            <option value="polar">Polar</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="f2">v2</label>
-                        <input type="text" id="v2" name="v2" placeholder="valores separados por comas">
+            <input type="text" id="v1" name="v1" placeholder="valores separados por comas">
 
-                        <select id="f2" name="forma">
-                            <option value="compleja">Compleja</option>
-                            <option value="carteciana">Carteciana</option>
-                            <option value="polar">Polar</option>
-                        </select>
-                    </li>
-                </ul>
+            <select id="f1" name="forma">
+                <option value="1">Cartesiana</option>
+                <option value="2">Polar</option>
+            </select>
+        </li>
+        <li>
+            <label for="f2">v2</label>
+            <input type="text" id="v2" name="v2" placeholder="valores separados por comas">
 
+            <select id="f2" name="forma">
+                <option value="1">Cartesiana</option>
+                <option value="2">Polar</option>
+            </select>
+        </li>
+    </ul>
 
-                <div>
-                    <form>
-                        <input id="agregar" type="submit" value="Agregar">
-                    </form>
-                </div>
-
-            </form>
-            </div>
-        </article>
+</form>
+</div>
+</article>
 
         <article>
             <h2>Operaciones</h2>
             <div>
             <form>
                 <ul class="menu">
-                    <li><label><input type="checkbox" name="suma">Suma</label></li>
-                    <li><label><input type="checkbox" name="resta">Resta</label></li>
-                    <li><label><input type="checkbox" name="pescalar">Producto Escalar</label></li>
-                    <li><label><input type="checkbox" name="ppunto">Producto Punto</label></li>
-                    <li><label><input type="checkbox" name="pvectorial">Producto Vectorial</label></li>
+                    <li><label><input type="checkbox" id="suma" name="suma">Suma</label></li>
+                    <li><label><input type="checkbox" id="resta" name="resta">Resta</label></li>
+                    <li><label><input type="checkbox" id="pescalar" name="pescalar">Producto Escalar</label></li>
+                    <li><label><input type="checkbox" id="pvectorial" name="pvectorial">Producto vectorial</label></li>
                 </ul>
             </form>
             </div>
 
             <div>
-                <form>
-                    <input type="submit" value="Calcular">
-                </form>
+                <button class="boton" onclick="calcular()">Calcular</button>
             </div>
         </article>
 
@@ -94,23 +84,18 @@
     <aside>
         <h3>Grafico</h3>
         <div>
-        <canvas id="grafico"></canvas>
+        <canvas id="grafico" width="400" height="200"></canvas>
         </div>
         <h3>Resultados</h3>
         <div>
-            <label><input id="resultado" type="text"></label>
+            <label><input type="text" id="resultado" name="resultado" readonly="readonly"></label>
         </div>
     </aside>
 </section>
 
-
-
 <footer>
     <h4>Diseño y desarrollo: Grandon Adrian para A-Team Company. Copyright 2017.</h4>
 </footer>
-
-
-
 
 </body>
 </html>

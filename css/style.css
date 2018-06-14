@@ -188,21 +188,6 @@ input[type=text] {
     width: 100%;
 }
 
-#agregar {
-    width: 20%;
-    padding: 5px;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 4px;
-    font-size: small;
-    color: buttontext;
-    background-color: buttonface;
-    border-color: buttonface;
-    border-width: 2px;
-    border-style: outset;
-    border-image: initial;
-}
-
 select {
     width: 25%;
     padding: 5px;
@@ -211,14 +196,9 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-
 }
 
-input:focus{
-    border: 1px solid #1668C4;
-}
-
-input[type="submit"] {
+.boton {
 
     background: #1668C4;
     color: #ffffff;
@@ -230,7 +210,10 @@ input[type="submit"] {
     font:1.2em "Open Sans", sans-serif;
 
 }
-input[type="submit"]:hover{
+.boton:focus{
+    border: 1px solid #1668C4;
+}
+.boton:hover{
     background:#4A88F4;
     cursor: pointer;
 }
