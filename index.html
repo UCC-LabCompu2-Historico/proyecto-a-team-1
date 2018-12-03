@@ -1,101 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="funciones.js"></script>
-
-    <title>Calculadora de vectores</title>
-</head>
-<body>
-
-<header>
-    <div class="logo">
-        <img src="img/logo.png" width="600px" alt="">
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="index.html"><h1>INICIO</h1></a></li>
-            <li><a href="help.html"><h1>AYUDA</h1></a></li>
-            <li><a href="http://www.vitutor.com/geo/vec/b_1.html"><h1>TEORIA</h1></a></li>
-            <li><a href="about.html"><h1>ACERCA DE</h1></a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<section class="main">
-
-    <section class="datos">
-
-<article>
-<h2>Vectores</h2>
-<div>
-<form>
-
-    <ul>
-        <li>
-            <label for="f1">v1</label>
-
-            <input type="text" id="v1" name="v1" placeholder="valores separados por comas">
-
-            <select id="f1" name="forma">
-                <option value="1">Cartesiana</option>
-                <option value="2">Polar</option>
-            </select>
-        </li>
-        <li>
-            <label for="f2">v2</label>
-            <input type="text" id="v2" name="v2" placeholder="valores separados por comas">
-
-            <select id="f2" name="forma">
-                <option value="1">Cartesiana</option>
-                <option value="2">Polar</option>
-            </select>
-        </li>
-    </ul>
-
-</form>
-</div>
-</article>
-
-        <article>
-            <h2>Operaciones</h2>
-            <div>
-            <form>
-                <ul class="menu">
-                    <li><label><input type="checkbox" id="suma" name="suma">Suma</label></li>
-                    <li><label><input type="checkbox" id="resta" name="resta">Resta</label></li>
-                    <li><label><input type="checkbox" id="pescalar" name="pescalar">Producto Escalar</label></li>
-                    <li><label><input type="checkbox" id="pvectorial" name="pvectorial">Producto vectorial</label></li>
-                </ul>
-            </form>
-            </div>
-
-            <div>
-                <button class="boton" onclick="calcular()">Calcular</button>
-            </div>
-        </article>
-
-    </section>
-
-    <aside>
-        <h3>Grafico</h3>
-        <div>
-        <canvas id="grafico" width="400" height="200"></canvas>
-        </div>
-        <h3>Resultados</h3>
-        <div>
-            <label><input type="text" id="resultado" name="resultado" readonly="readonly"></label>
-        </div>
-    </aside>
-</section>
-
-<footer>
-    <h4>Diseño y desarrollo: Grandon Adrian para A-Team Company. Copyright 2017.</h4>
-</footer>
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="funciones.js"></script>
+		<title>Calculadora de vectores</title>
+	</head>
+	<body onLoad="recargar()">
+		<header>
+			<div class="logo">
+				<img src="img/logo.png" width="600px" alt="">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html"><h1>INICIO</h1></a></li>
+					<li><a href="help.html"><h1>AYUDA</h1></a></li>
+					<li><a href="http://www.vitutor.com/geo/vec/b_1.html"><h1>TEORIA</h1></a></li>
+					<li><a href="about.html"><h1>ACERCA DE</h1></a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="datos">
+				<article>
+					<h2>Vectores</h2>
+					<div>
+						<form>
+							<ul>
+								<li class="vectores">
+									<label for="f1">v1</label>
+									<input type="text" id="v1" name="v1" placeholder="coordenada x ,  coordenada y" onkeyup="this.value=bloqueo(this.value)">
+									<select id="f1" name="forma" onchange="ingresoV1()">
+										<option value="1">Cartesiana</option>
+										<option value="2">Polar</option>
+									</select>
+								</li>
+								<li class="vectores">
+									<label for="f2">v2</label>
+									<input type="text" id="v2" name="v2" placeholder="coordenada x ,  coordenada y" onkeyup="this.value=bloqueo(this.value)">
+									<select id="f2" name="forma" onchange="ingresoV2()">
+										<option value="1">Cartesiana</option>
+										<option value="2">Polar</option>
+									</select>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</article>
+				<article>
+					<h2>Operaciones</h2>
+					<div>
+						<form>
+							<ul class="menu">
+								<li><label><input type="radio" id="suma" name="operacion" checked>Suma</label></li>
+								<li><label><input type="radio" id="resta" name="operacion">Resta</label></li>
+								<li><label><input type="radio" id="pescalar" name="operacion">Producto Escalar</label></li>
+								<li><label><input type="radio" id="angulo" name="operacion">Angulo entre Vectores</label></li>
+							</ul>
+						</form>
+					</div>
+					<div>
+						<button class="boton" onclick="verificar()">Calcular</button>
+					</div>
+				</article>
+			</section>
+			<aside>	
+				<h3>Grafico</h3>
+				<div id="output"></div>
+				<div>
+					<canvas id="grafico" width="440" height="270"></canvas>
+				</div>
+				<h3>Resultados</h3>
+				<div>
+					<label><input type="text" id="resultado" name="resultado" readonly="readonly"></label>
+				</div>
+			</aside>
+		</section>
+		<footer>
+			<h4>Diseño y desarrollo: Grandon Adrian para A-Team Company. Copyright 2017.</h4>
+		</footer>
+	</body>
 </html>

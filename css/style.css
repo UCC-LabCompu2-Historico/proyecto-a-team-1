@@ -80,13 +80,17 @@ aside {
     float: left;
     margin-bottom: 20px;
     border-radius: 5px;
-
 }
 
 div {
     padding: 20px;
 }
 
+div#output {
+    padding: 0px;
+    float: right;
+    margin-right: 20px;
+}
 
 .main .ejemplos {
     width: 100%;
@@ -168,9 +172,13 @@ ul{
 }
 
 
-input[type=checkbox] {
+input[type=radio] {
     margin: 8px;
+}
 
+.menu label:hover{
+	text-shadow: 1px 1px 1px rgba(81, 203, 238, 1);
+    cursor: pointer;
 }
 
 input[type=text] {
@@ -181,6 +189,11 @@ input[type=text] {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.vectores input[type=text]:focus{
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
 }
 
 
@@ -197,6 +210,13 @@ select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+.vectores select:hover {
+	cursor: pointer;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
 
 .boton {
 
